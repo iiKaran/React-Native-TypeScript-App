@@ -1,0 +1,68 @@
+import { View, Text, ScrollView, StyleSheet,Dimensions } from 'react-native';
+import React from 'react';
+export default function App() {
+  return (
+    <View style={styles.mainCont}>
+      <ScrollView horizontal={true} style={styles.scrollview}>
+        <View style={styles.container}>
+          <Text style={styles.text}>
+            1
+          </Text>
+        </View>
+        {/* ... (repeat for other items) */}
+        <View style={styles.container}>
+          <Text style={styles.text}>
+            1
+          </Text>
+        </View>
+        <View style={styles.container}>
+          <Text style={styles.text}>
+            1
+          </Text>
+        </View>
+        <View style={styles.container}>
+          <Text style={styles.text}>
+            1
+          </Text>
+        </View>
+        <View style={styles.container}>
+          <Text style={styles.text}>
+            1
+          </Text>
+        </View>
+      </ScrollView>
+      <Text>Hello</Text>
+    </View>
+  );
+}
+
+const styles = StyleSheet.create({
+  mainCont: {
+    flex: 1,
+    backgroundColor: "yellow",
+    justifyContent: "center", // Center vertically
+    alignItems: "center", // Center horizontally
+  },
+  container: {
+    width: 200,
+    height: 200,
+    margin: 12,
+    backgroundColor: 'red',
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+    marginTop:50,
+  },
+  text: {
+    color: "white",
+    borderWidth: 1,
+    borderColor: "yellow",
+    padding: 30,
+  },
+  scrollview: {
+    backgroundColor: "purple",
+    height: 300,
+    flexGrow:0
+    
+  },
+});
